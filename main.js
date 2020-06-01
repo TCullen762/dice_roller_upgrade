@@ -1,4 +1,4 @@
-console.log(' link successful')
+//console.log(' link successful')
 
 //TODO:
 //Create an empty array called attempts 
@@ -25,8 +25,12 @@ also experiment with a FOR loop for efficency?
 
 
 
-//let collin= " troll"
-//let gizmo = " well it looks like you survived this time"
+let collin= ['string1','bumhole','string3','shite','string5','bolloks','string7','string8','string9','string10','string11','string13','string14','string15']
+let energyVamp = collin[2]
+//us if statment with for loop to return ranom index position for energyVamp
+
+
+
 
 let allRolls= 0
 
@@ -37,25 +41,32 @@ const  rollButton = document.querySelector("#roll_button")
         
             let counter= 0
             while( counter< numbDice){
-                let rando = Math.floor(Math.random()*6)+1
+                let rando = Math.floor(Math.random()*10)+1
                  allRolls += rando
                   //attempts.push(rando)
                
-                  const inputResult =document.querySelector("#inputResult")//selects HTML Node
-                  inputResult.innerHTML = allRolls
-                  counter += 1
-            } //end loop
-            
-            console.log(allRolls)
+                 
 
+                  const inputResult =document.querySelector("#inputResult")//selects HTML Node
+                  inputResult.innerHTML = allRolls //collin[] may actually need a for loop
+                  counter += 1
+                  
+            } //end loop
+            let numb = Math.floor(Math.random()*10)+1
+            console.log(numb)
+            for (let index = numb; index < collin.length; index += 1) {
+                const victimResult = collin[numb]
+                console.log(victimResult)
+            
+                const inputResult =document.querySelector("#inputResult")//selects HTML Node
+                inputResult.innerHTML = victimResult //collin[] may actually need a for loop
+            
+            }
+            
+            
+            
         })
 
-        /*if(allRolls<=1){
-           
-            let engryVamp = document.querySelector("#sucksForYou")//selects HTML Node
-            engryVamp.innerHTML = gizmo
-            }else{
-                let engryVamp = document.querySelector("#sucksForYou")//selects HTML Node
-            engryVamp.innerHTML = collin
-            }
-        */
+        
+
+        
