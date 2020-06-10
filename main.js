@@ -25,48 +25,55 @@ also experiment with a FOR loop for efficency?
 
 
 
-let collin= ['string1','bumhole','string3','shite','string5','bolloks','string7','string8','string9','string10','string11','string13','string14','string15']
+let collin= ['wow you really stink','That was refreshing!','Thought you were stronger, oh well I should have known','shite','string5','bolloks','string7','string8','string9','string10','string11','string13','string14','string15']
 let energyVamp = collin[2]
-//us if statment with for loop to return ranom index position for energyVamp
 
 
 
 
-let allRolls= 0
+//****button returns everything regardless if anything in inputted.  maybe an else/if statement? */
 
 const  inputBox  = document.querySelector("#input_box")//selects HTML node
 const  rollButton = document.querySelector("#roll_button")
         rollButton.addEventListener("click",function(){
-            let numbDice = inputBox.value //takes input from inputBox
-        
-            let counter= 0
-            while( counter< numbDice){
+            let userInput = inputBox.value //takes input from inputBox
+            
+        if(userInput<=10){
+           
+            for(let index =0;index<userInput;index ++){
                 let rando = Math.floor(Math.random()*10)+1
-                 allRolls += rando
-                  //attempts.push(rando)
-               
                  
-
-                  const inputResult =document.querySelector("#inputResult")//selects HTML Node
-                  inputResult.innerHTML = allRolls //collin[] may actually need a for loop
-                  counter += 1
-                  
-            } //end loop
-            let numb = Math.floor(Math.random()*10)+1
-            console.log(numb)
-            for (let index = numb; index < collin.length; index += 1) {
+                  console.log(userInput)
+                  console.log('the random number produced is:'+' '+ rando)
+               
+                 const survivalResult = document.querySelector ("#inputResult")
+                 let survival= ' You survived a total of:'+' '+ rando +' '+ 'seconds!'
+                 survivalResult.innerHTML = survival
+                 } //end loop
+            
+                 let numb = Math.floor(Math.random()*10)+1
+               console.log('the index number is:'+' '+numb)
+           
+               for (let index = numb; index < collin.length; index += 1) {
                 const victimResult = collin[numb]
-                console.log(victimResult)
-            
-                const inputResult =document.querySelector("#inputResult")//selects HTML Node
-                inputResult.innerHTML = victimResult //collin[] may actually need a for loop
-            
-            }
-            
-            
-            
-        })
+                console.log('victim result is ' +''+ victimResult)
+                const inputResult =document.querySelector("#collinResponds")//selects HTML Node
+                
+                inputResult.innerHTML = victimResult 
+             
 
+
+            }//end for loop
+           
+        
+        }else{
+            let hey = alert (' please pick a number between 1- 10')
+            return hey}
+            
         
 
+    })
+
         
+/**var myobj = document.getElementById("demo");
+myobj.remove();---(poached from W3Schools used here as reference only) */
