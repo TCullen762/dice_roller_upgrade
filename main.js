@@ -74,6 +74,16 @@ const  rollButton = document.querySelector("#roll_button")
 
     })
 
+    const redo = document.querySelector("#redo")
+
+    redo.addEventListener("click", function(){
+        inputBox .reset
+        function undo() {
+           let redo = document.querySelector("#input_box")
+           //redo.reset
+           
+          }
+          
+    })
+
         
-/**var myobj = document.getElementById("demo");
-myobj.remove();---(poached from W3Schools used here as reference only) */
